@@ -1,0 +1,1216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sixtyfour&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Workbench&display=swap');
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/*   These are all for fonts  */
+
+  .workbench-type {
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+  }
+  .spline-sans mono-spline {
+    font-family: "Spline Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  .roboto-regular2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #566370;
+  }
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+  }
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  } 
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+
+
+/* End of fonts */
+
+
+
+
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+  position: fi;
+  font-family: 'sixtyfour';
+  color: white;
+  font-weight: normal;
+  }
+  
+  h3 {
+  font-family: 'sixtyfour';
+  color: white;
+  font-weight: normal;
+      }
+
+
+h4 {
+  font-weight: normal;
+}
+
+
+h5 {
+  font-weight: normal;
+  font-family: 'workbench'
+}
+
+
+/* title screen section */
+
+
+
+img.mainscreen {
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.containercontainer {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+section.container {
+  display: block;
+  width:100%;
+  height:100vh;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+  
+}
+
+
+div.loader {
+  position: fixed;
+width: 100%;
+height: 100%;
+z-index: 50;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black ;
+color: white;
+transition: opacity 2s;
+}
+
+#play
+{
+  padding: 20px;
+  border: none !important;
+  background-color: white;
+  font-family: 'workbench';
+  margin: 30px;
+}
+
+#tester
+{
+  padding: 20px;
+  border: none !important;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  font-family: 'workbench';
+}
+
+#tester:active{
+  background-color: blue;
+
+}
+
+
+
+video.bgvid {
+position: fixed;
+  min-width: 100%;
+min-height: 100%;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: auto;
+height: auto;
+z-index: -10;
+background-size: cover;
+}
+
+video.bgvid2 {
+  position: fixed;
+    min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  z-index: 0;
+  background-size: cover;
+  opacity: 0;
+}
+
+.appear1{
+  animation: vidanim;
+  animation-duration: 4.9s;
+  }
+
+  .appear3{
+    display: none !important;
+    }
+
+
+
+
+
+
+  @keyframes vidanim {
+
+  
+  0% { opacity: 1.0; z-index: 30; }
+
+  99% { opacity: 1.0; z-index: 30;}
+100% { opacity: 0; z-index: 0;}
+  }
+.solution {
+  padding-top: 1000px;
+}
+
+
+
+h1.hey {
+    z-index: 1;
+    font-family: 'sixtyfour';
+    position: sticky;
+    text-align: center;
+    font-size: calc(1.2em + 5vw);
+font-weight: normal;}
+
+.appear2
+{
+animation-name: h1anim;
+  animation-duration: 1s; 
+  animation-delay: 4.65s;
+}
+
+.name {
+  mix-blend-mode: difference;
+}
+
+.effing {
+display: flex;
+}
+
+h1.hey1 {
+  z-index: 1;
+  font-family: 'sixtyfour';
+  position: sticky;
+  text-align: center;
+ font-size: 1px;
+font-weight: normal;
+font-size: calc(1.2em + 5vw);
+animation-name: h1anim;
+  animation-duration: 1s; 
+background-color: white;
+transition: 1s;
+filter: blur(5px);
+ 
+}
+
+
+.h1parent {
+  z-index: 10;
+
+}
+
+.h1parent:hover .hey1 {
+filter: blur(0);
+  background-color: transparent;
+
+
+}
+
+
+
+@keyframes h1anim {
+  from {opacity: 0%; filter: blur(200px);}
+  to {opacity: 100%;}
+}
+
+.hey2 {
+    z-index: 1;
+    text-align: center;
+    bottom: 20px;
+    font-size: calc(1.2em + 5vw);
+    font-weight: normal;
+    position: relative
+  }
+
+.wow {
+    z-index: 1;
+   position: fixed;
+    mix-blend-mode: hard-light;
+    width: 200px;
+    height: 100px;
+    word-spacing: 16px;
+    padding: 20px;
+    font-family: 'sixtyfour';
+    color: white;
+    font-weight: normal;
+
+}
+
+.arrowgroup {
+text-align: center;
+z-index: 110;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.arrowappear
+{
+animation-delay: 4.5s;
+animation-duration: 6s;
+animation-name: arrowanim;
+animation-timing-function: cubic-bezier(.75,-0.14,.8,.21);
+
+
+  padding-bottom: 20px;
+}
+
+@keyframes arrowanim {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+.h5arrow {
+  color: white;
+}
+
+  .arrow {
+display: flex;
+margin-top: 10px;
+    width: 50px;
+    height: auto;
+    color: white;
+    object-position: bottom bottom;
+
+}
+
+
+
+/* end of title screen and start of intro */
+
+
+
+.intro {
+    padding-top: 300px !important; 
+    padding-bottom: 200px !important;
+    padding: 30px;
+    background-color: rgb(205, 0, 0);
+    z-index: 11;
+}
+
+h2 {
+    font-family: "sixtyfour"; 
+    color: white;
+    font-weight: normal;
+    font-size: calc(1.5em + 2vw);
+    line-height: 1.25em;
+    margin-bottom: 180px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.okh2 {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.okokh2 {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  font-family: 'workbench';
+  font-size: calc(1.5em + 4vw);
+}
+
+
+.introp {
+padding-top: 150px !important;
+
+
+font-family: 'Spline Sans Mono', monospace;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+p{
+  padding-top: 150px !important;
+    max-width: calc(900px+2vw);
+    font-family: 'Spline Sans Mono', monospace;
+    color: white;
+    font-size: calc(1.3em + 1vw);
+    opacity:0;
+    transition: opacity 2s;
+    margin: 1rem 0 5rem;
+}
+
+
+@media (max-width: 500px) {
+  
+  .smolimg {
+    max-width: 200px !important;
+  }
+
+  .intro {
+    padding: 15px !important;
+  }
+
+  .partone {
+    padding: 15px !important;}
+
+  .parttwo {
+    padding: 15px !important;}  
+
+  .partthree {
+    padding: 15px !important;}
+  .pre-partthree {
+    padding: 15px !important;
+  }
+  .partfour {
+    padding: 15px !important;}
+
+
+  p {
+    padding-bottom: 300px !important;
+    
+    
+  }
+}
+
+@media (min-width: 1000px) {
+  
+
+  .intro {
+    padding: 90px !important;
+  }
+
+  .partone {
+    padding: 90px !important;}
+
+  .parttwo {
+    padding: 90px !important;}  
+
+  .partthree {
+    padding: 90px !important;}
+  .pre-partthree {
+    padding: 90px !important;
+  }
+  .partfour {
+    padding: 90px !important;}
+
+
+ 
+    
+    
+  }
+
+
+.graph  {
+  margin: 30px !important;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph1{
+  position: inherit;
+
+}
+ 
+
+
+.alth3 {
+  color: black !important;
+  font: .5em !important;
+}
+
+
+.gif {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  width: 100% ;
+  height: auto;
+}
+
+.para{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.meme {
+  font-family: 'Spline Sans Mono';
+    color: rgb(140, 140, 255);
+    display: flex;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-decoration: underline;
+}
+
+.meme:hover + .gif {
+  display: block;
+  
+}
+
+
+.meme2 {
+  font-family: 'Spline Sans Mono';
+    color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0 !important;
+    text-decoration: underline;
+}
+
+.meme2:hover + .gif {
+  display: block;
+  
+}
+
+iframe {
+  border: none;
+}
+
+
+.imgmeme {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  width: 400px !important;
+  height: auto;
+}
+
+.meme:hover + .imgmeme {
+  display: block;
+  
+}
+.meme2:hover + .imgmeme {
+  display: block;
+  
+}
+
+
+.gameintro{
+  font-family: 'workbench';
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+
+.ptweet{
+  padding: 15px!important;
+  font-family: 'roboto';
+  color: black !important;
+  margin-bottom: 10px !important;
+  opacity: 100%;
+}
+
+.table3 {
+  display: flex;
+flex-direction: column;
+padding-top: 200px;
+}
+
+
+.opinion {
+
+border-style: dotted;
+padding: 10px;
+margin: 10px;
+background-color: #ffffff;
+color: rgb(0, 0, 0) !important;
+font-size: calc(1.3em + 1vw);
+  font-family: 'workbench';
+  z-index: 10;
+
+}
+
+.opinion:after{
+  content:'a particular attitude or way of considering a matter';
+}
+
+.opinion:hover::after{
+content: 'X  -  this corresponds to a viewpoint'
+}
+
+
+
+.opinion1 {
+
+  border-style: dotted;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffffff;
+  font-size: calc(1.3em + 1vw);
+  color: black !important;
+  z-index: 100;
+  font-family: workbench;
+  }
+
+
+
+  .opinion1:after{
+    content:'a piece of information presented as having objective reality';
+  }
+
+  .opinion1:hover::after{
+     content: 'X  -  this corresponds to a fact'
+   }
+
+  .opinion2 {
+
+    border-style: dotted;
+    padding: 10px;
+    font-size: calc(1.3em + 1vw);
+    margin: 10px;
+    background-color: #ffffff;
+    color: black !important;
+    z-index: 100;
+    font-family: workbench;
+    }
+
+
+.opinion:hover {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255) !important;
+}
+
+.opinion:hover + .solution {
+  display: none;
+}
+
+.opinion1:hover {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255) !important;
+}
+
+
+.opinion2:hover {
+background-color: rgb(153, 255, 0);
+}
+
+
+.opinion2:after{
+  content: 'A judgment formed about something, not necessarily based on fact or knowledge.'
+}
+
+.opinion2:hover::after{
+  content: 'A judgment formed about something, not necessarily based on fact or knowledge. Yup. Click me.'
+ }
+
+
+
+
+
+.quizzthree {
+padding-bottom: 500px !important;
+}
+
+
+.hashtag{
+  padding: 15px!important;
+  font-family: 'roboto';
+  color: rgb(75, 134, 253) !important;
+  margin-bottom: 10px !important;
+  opacity: 100%;
+}
+
+.altp {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.altp2{
+  padding-top: 300px !important;
+  padding-bottom: 400px !important;
+}
+
+.altp3{
+  padding-top: 300px !important;
+}
+
+
+
+
+.endp{
+  font-weight: 800;
+  z-index: 0;
+margin-top: 200px !important;
+margin-bottom: 200px !important;
+}
+
+.tweet {
+    font-family: 'roboto';
+    
+}
+
+/* This section was initially provided by codepen.com and was adapted (made a complete overhaul) to look like a modern tweet https://codepen.io/moshfequr9/pen/wXQbPR */
+
+
+  .avator {
+    border-radius:100px;
+    width:50px;
+    margin-right: 4px;
+  }
+  
+  
+  .tweet-wrap {
+    max-width:490px;
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius:12px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: rgb(199, 199, 199);
+  
+  }
+  
+  .tweet-content{
+    padding-left:2px;
+    
+  }
+  
+
+ 
+  
+  
+  .tweet-header-info {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column !important;
+    max-width: 210px !important;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .tweet-header-info span {
+    color:#657786;
+    font-weight:normal;
+  }
+  .tweet-header-info p {
+    font-weight:normal;
+    margin-top: 5px;
+    
+  }
+  .tweet-img-wrap {
+    padding-left: 60px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    padding-bottom: 10px;
+    
+  }
+  
+  .tweet-info-counts {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+  .tweet-info-counts div {
+    display: flex;
+   
+  }
+  .tweet-info-counts div svg {
+    color:#657786;
+    margin-right: 5px;
+  }
+  
+
+
+
+    .tweet-header {
+      display: flex;
+      flex-direction:row !important;
+      align-items:center !important;
+    font-family:'roboto';
+    font-size:15px;
+      
+    }
+
+    .tweet-header-info p {
+      margin-bottom: 30px;
+    }
+    .tweet-img-wrap {
+      padding-left: 0;
+    
+    }
+    .tweet-info-counts {
+    display: flex;
+    margin-left: 0;
+  }
+  .tweet-info-counts div {
+    margin-right: 10px;
+  }
+  
+
+  /* end of codepen provided section screen */
+
+
+  .quizzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 1PX;
+    object-position: center center;
+    z-index: -10;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+  }
+
+
+
+ 
+
+.table1 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.table2 {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+    /* Responsive layout - taken and modified from W3 schools */
+
+    
+
+@media (max-width: 600px) {
+  .table1 {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .table2 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .gameintro {
+    padding-top: 300px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .imgmeme {
+    max-width: 300px !important;
+  }
+}
+
+
+  .table1 a {
+    text-decoration: none;
+    color: black;
+    font-family: 'workbench';
+    font-size: 18px;
+    font-weight: 700;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .table1 a:visited {
+    color: white;
+    padding: 40px;
+    background-color: red;
+    border: 1px solid;
+    border-color: black;
+}
+
+
+.quizztwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1PX;
+  object-position: center center;
+  z-index: 100;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+}
+
+.table2 a {
+  text-decoration: none;
+  color: black;
+  font-family: 'workbench';
+  font-size: 18px;
+  font-weight: 700;
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.instit{
+border-style: dashed;
+}
+
+.nea{
+  filter: blur(5px);
+  transition: filter 1s ease-out 100ms;
+}
+
+.nea:hover  {
+filter: blur(10px);
+}
+
+.journa{
+border-style: dashed;
+}
+
+
+.false:hover  {
+  border-style: block !important;
+  animation: shake;
+  animation-name: shake;
+  animation-duration: 1s;
+  }
+
+
+.user{
+border-style: dashed;
+}
+
+.user:hover  {
+border-style: block !important;
+animation: shake;
+animation-name: shake;
+animation-duration: 1s;
+}
+
+@keyframes shake {
+ from, to {
+   transform: translate3d(0, 0, 0); 
+ }
+ 10%, 30%, 50%, 70%, 90% {
+   transform: translate3d(-10px, 0, 0); background-color: red;
+ }
+ 20%, 40%, 60%, 80% {
+   transform: translate3d(10px, 0, 0);background-color: red;
+ }
+}
+
+.table2 a:hover {
+  text-decoration: underline !important;
+}
+
+
+
+.question {
+  padding-top: 30px;
+
+  padding-bottom: 40px;
+
+}
+
+.question2 {
+  padding-top: 30px;
+color: black !important;
+  padding-bottom: 40px;
+
+}
+
+
+.correct {
+text-decoration: dashed !important;
+}
+
+.partone {
+  padding-top: 200px !important;
+  padding-bottom: 200px !important;
+    color: white;
+    background-color: white;
+   padding: 30px;
+    position: relative !important;
+}
+
+.partone h2 {
+    color: black;
+    padding-bottom: 40px;
+}
+
+.partone p {
+    color: black;
+}
+
+.red p {
+    color: red;
+}
+
+.smolimgcontainer {
+  transform: rotate(26deg);
+  padding-top: 10vw;
+  padding-bottom: 0;
+  
+}
+
+.smolimg {
+max-width: 300px;
+height: auto !important;
+border-radius: 10px !important;
+border: #657786;
+
+}
+
+
+
+.parttwo {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  padding: 30px;
+    background-color: blue;
+
+position: relative !important;
+  }
+
+.quote {
+    font-family: 'Spline Sans Mono';
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+.quote2 {
+  font-family: 'Spline Sans Mono';
+  font-weight: 200;
+  font-style: italic;
+  padding: 30px !important;
+  color: black !important;
+opacity: 1;
+margin-bottom: 0!important;
+}
+
+.pre-partthree {
+  padding-top: 200px !important;
+    padding: 0 40px 40px 40px;
+    background-color: black;
+}
+.partthree {
+  
+
+    padding: 40px;
+    background-image: linear-gradient(black,red, orange);
+}
+
+.partfour p {
+    color: black;
+}
+
+.partfour h3 {
+    color: black;
+}
+.partfour {
+
+  padding-bottom: 200px !important;
+    padding: 40px;
+    background-image: linear-gradient(orange, rgb(255, 255, 188),rgb(197, 197, 255),rgb(217, 188, 255));
+}
+
+
+/* This section was copied from the following url: https://codepen.io/pgalor/pen/OeRWJQ */
+
+.okokh2{
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.okokh2:before,
+.okokh2:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.okokh2:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.okokh2:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+
+
+/* End of copied code */
+
+
+
+
+
+
+
+.conclusion {
+  padding-top: 400px;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.appear{
+  opacity:1;
+}
