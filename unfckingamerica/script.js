@@ -15,9 +15,9 @@ const load = document.querySelector("div.loader")
 const arrow = document.querySelector(".arrowgroup")
 
 document.querySelector("#play").addEventListener("click", () => {
+    document.getElementById("beyhive").play();
     document.querySelector("#eclipse").play();
     document.querySelector("#fullvid").play();
-    document.getElementById("beyhive").play();
     vid.classList.toggle("appear1")
     txt.classList.toggle("appear2")
     load.classList.toggle("appear3")
